@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://abhijitsethi:abhijitsethi@cluster0.ygopx.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "jsonWebTokenSecret": "helloWorld"
+}
