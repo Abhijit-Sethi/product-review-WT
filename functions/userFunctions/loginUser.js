@@ -1,27 +1,24 @@
-const {validationResult} = require("express-validator")
+const { validationResult } = require("express-validator");
+const User = require("../../schemas/User");
 const jwt = require("jsonwebtoken");
 const config = require("config");
 
-let User = require("../../schemas/User");
-module.exports =async (req,res) => {
+module.exports = async (req, res) => {
   try {
-    let {email,password} = req.body;
-
-    let user = await User.findOne({email});
-
+    let { email, password } = req.body;
+    let user = await User.findOne({ email });
     let errors = validationResult(req);
-    
-    if(!errors.isEmpty()){
-      return res.status(400).json({errors : errors.array()});
-    }
 
-    if(!user){
-      return res.status(404).send("User doesn't exist");
-    }
+    if (!errors.isEmpty())
+      return res.status(400).json({ errors: errors.array() });
 
-    if(password !== user.password){
+    if (!user)
+      return res
+        .status(404)
+        .send("User with this e-mail hasn't been created yet");
+
+    if (user.password !== password)
       return res.status(401).json({ msg: "Passwords do not match" });
-    }
 
     const payload = {
       user: {
@@ -38,9 +35,8 @@ module.exports =async (req,res) => {
         res.json({ token });
       }
     );
-
   } catch (error) {
-    console.error(error);
-    return res.status(500).send("Server error");
+    console.error(error.message);
+    return res.status(500).send("Server error.");
   }
-}
+};

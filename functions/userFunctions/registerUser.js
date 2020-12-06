@@ -43,7 +43,7 @@ module.exports = async (req,res) => {
     });
 
     await newUser.save();
-    // res.send("NEW USER is created.");
+    res.send("NEW USER is created.");
 
     const payload = {
       user:{

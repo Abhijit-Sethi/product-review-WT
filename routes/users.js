@@ -15,10 +15,10 @@ const {
   changeUserDataValidator,
   checkActualPasswordValidator,
   changeUserPasswordValidator,
-} = require("../middleware/express-validator/expressValidator");
+} = require("../middleware/expressValidator");
 const searchUserByUsername = require("../functions/userFunctions/searchUserByUsername");
 const changeUserData = require("../functions/userFunctions/changeUserData");
-const checkActualPassword = require("../functions/userFunctions/checkActualPassword");
+const checkActualPassword = require("../functions/userFunctions/checkPassword");
 const changeUserPassword = require("../functions/userFunctions/changeUserPassword");
 
 router.get("/", authentication, getUserByMiddleware);
