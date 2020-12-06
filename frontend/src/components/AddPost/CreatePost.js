@@ -17,7 +17,7 @@ const CreatePost = ({ createPost }) => {
     <div className="tips-wrapper">
       <p className="font__p p__size font__bold app_color_font">
         <i className="fas fa-check-circle small_margin_right"></i>
-        Tips on getting good answers quickly
+        PRODUCT
       </p>
       <br />
 
@@ -25,28 +25,14 @@ const CreatePost = ({ createPost }) => {
         <li className="tip-item">
           <p className="font__p">
             <i className="fas fa-check small_margin_right"></i>
-            Make sure your question hasn't been asked already
+            Make sure your product has not been alloted a topic already!
           </p>
         </li>
 
         <li className="tip-item">
           <p className="font__p">
             <i className="fas fa-check small_margin_right"></i>
-            Keep your question short and to the point
-          </p>
-        </li>
-
-        <li className="tip-item">
-          <p className="font__p">
-            <i className="fas fa-check small_margin_right"></i>
-            Double-check grammar and spelling
-          </p>
-        </li>
-
-        <li className="tip-item">
-          <p className="font__p">
-            <i className="fas fa-check small_margin_right"></i>
-            Start Your question with "What","How","Why",etc.
+            Kindly keep it concise
           </p>
         </li>
       </ul>

@@ -1,7 +1,7 @@
 let Post = require("../../schemas/Post")
 module.exports =async(req,res)=>{
   try {
-    let post = await Post.findById(req.params.id);
+    let post = await Post.findById(req.params.post_id);
     if(!post)
     return res.status(404).json("Post not found")
 
