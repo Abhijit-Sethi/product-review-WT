@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { checkPasswords } from "../actions/auth.actions/checkPasswords";
 import { changePassword } from "../actions/auth.actions/ChangePassword";
 import { connect } from "react-redux";
-// import ErrorMessage from "../components/ErrorMessage";
-// import PasswordChangeMessage from "../components/PasswordChangeMessage";
+import ErrorMessage from "../components/ErrorMessage";
+import PasswordChangeMessage from "../components/PasswordChangeMessage";
 
 const ChangePassword = ({
   auth: { errors, isAllowedToChangePassword },

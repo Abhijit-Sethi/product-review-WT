@@ -1,4 +1,4 @@
-import { GET_POST, POST_ERROR } from "../../constants/post.constants";
+import { GET_POST, POST_ERROR } from "../../../constants/post.constants";
 import axios from "axios";
 
 export const getPost = (post_id) => async (dispatch) => {

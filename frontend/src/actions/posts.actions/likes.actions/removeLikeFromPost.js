@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { REMOVE_POST, POST_ERROR } from "../../constants/post.constants";
+import { REMOVE_POST, POST_ERROR } from "../../../constants/post.constants";
 
 
 

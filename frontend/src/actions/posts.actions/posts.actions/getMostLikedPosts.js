@@ -1,7 +1,7 @@
 import {
     MOST_LIKED_POSTS,
     POST_ERROR,
-  } from "../../constants/post.constants";
+  } from "../../../constants/post.constants";
   import axios from "axios";
   
   export const getMostLikedPosts = () => async (dispatch) => {

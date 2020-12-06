@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { logOut } from "../../actions/auth.actions/logOut";
 import NavbarLinks from "./navbar/NavbarLinks";
-import NavbarLogo from "./navbar/NavbarLogo";
+import NavbarLogo from "./NavbarLogo";
 
 const Navbar = ({ logOut, auth: { isLoggedIn } }) => {
   let [isSidebar, setSidebar] = useState(false);

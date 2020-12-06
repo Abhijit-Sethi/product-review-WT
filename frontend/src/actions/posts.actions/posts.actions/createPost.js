@@ -1,4 +1,4 @@
-import { MAKE_POST, POST_ERROR } from "../../constants/post.constants";
+import { MAKE_POST, POST_ERROR } from "../../../constants/post.constants";
 import axios from "axios";
 
 export const createPost = (textOfThePost) => async (dispatch) => {

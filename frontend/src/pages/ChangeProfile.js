@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { changeUserData } from "../actions/auth.actions/changeUserData";
-// import ErrorMessage from "../components/ErrorMessage";
+import ErrorMessage from "../components/ErrorMessage";
 
 const ChangeProfile = ({ changeUserData, posts: { errors } }) => {
   let [dataType, setDataType] = useState("");

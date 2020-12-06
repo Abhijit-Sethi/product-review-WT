@@ -12,13 +12,13 @@ import Users from "./pages/Users";
 import Account from "./pages/Account";
 import AddPost from "./pages/AddPost";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import {BrowserRouter as Router,Route,Switch } from "react-router-dom";
 import store from './store';
 import {Provider} from 'react-redux';
 import setAuthenticationToken from"./middleware/setAuthenticationToken";
 import {userLoaded} from "./actions/auth.actions/userLoaded";
 import "./App.css";
+import PrivateRoute from "./routes/PrivateRoute";
 import ChangePassword from "./pages/ChangePassword";
 if (localStorage.getItem('token')){
  
@@ -40,9 +40,21 @@ const App = () => {
           <Route path="/topics/topic/:topic_id" exact component={TopicPage} />
           <Route path="/register" exact component={RegistrationPage} />
           <Route path="/login" exact component={LoginPage} />
+          <PrivateRoute
+            path="/change-password"
+            exact
+            component={ChangePassword}
+          />
+          <PrivateRoute path="/dashboard" exact component={Dashboard} />
+          <PrivateRoute path="/add-post" exact component={AddPost} />
+          <PrivateRoute
+            path="/change-profile"
+            exact
+            component={ChangeProfile}
+          />
+          <PrivateRoute path="/account" exact component={Account} />
 
-            </Switch>
-            <Footer />
+          </Switch>
           </Provider>
 
         </Router>    

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { getUserPosts } from "../actions/users.actions/getUserPosts";
 import UserPostsWrapper from "./UserPost/UserPostWrapper";
-// import AccountPageSection from "../components/AccountPage/AccountPageSection";
+import AccountPageSection from "../components/AccountPage/AccountPageSection";
 
 const Account = ({
   getUserPosts,

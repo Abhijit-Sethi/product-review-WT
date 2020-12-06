@@ -2,8 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { createPost } from "../actions/posts.actions/posts.actions/createPost";
 import { clearPost } from "../actions/posts.actions/posts.actions/clearPost";
-// import CreatePost from "../components/AddPost/CreatePost";
-// import Output from "../components/AddPost/Output";
+import CreatePost from "../components/AddPost/CreatePost";
+import Output from "../components/AddPost/Output";
 
 const AddPost = ({ clearPost, createPost, posts: { post } }) => {
   setTimeout(() => {

@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import {loginUser} from '../actions/auth.actions';
+import {loginUser} from '../actions/auth.actions/loginUser';
 import {connect} from 'react-redux';
 
 

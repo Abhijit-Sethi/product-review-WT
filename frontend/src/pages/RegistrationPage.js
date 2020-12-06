@@ -1,6 +1,6 @@
 import React,{ useState} from "react";
 
-import {registerUser} from '../actions/auth.actions';
+import {registerUser} from '../actions/auth.actions/registerUser';
 import {connect} from 'react-redux';
 
 

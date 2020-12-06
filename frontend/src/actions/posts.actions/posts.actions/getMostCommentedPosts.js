@@ -1,4 +1,4 @@
-import { MOST_COMMENTED, POST_ERROR } from "../../constants/post.constants";
+import { MOST_COMMENTED, POST_ERROR } from "../../../constants/post.constants";
 import axios from "axios";
 
 export const getMostCommentedPosts = () => async (dispatch) => {

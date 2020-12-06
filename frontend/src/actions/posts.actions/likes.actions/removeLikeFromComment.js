@@ -1,6 +1,6 @@
 import axios from 'axios';
 import  { REMOVE_LIKE_FROM_COMMENT, POST_ERROR, }
-from "../../constants/post.constants";
+from "../../../constants/post.constants";
  
 
 

@@ -1,5 +1,5 @@
 import React from "react";
-// import successity from "../successity.png";
+import successity from "../successity.png";
 import { Link } from "react-router-dom";
 
 const Dashboard = () => {

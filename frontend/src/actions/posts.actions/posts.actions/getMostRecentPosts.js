@@ -1,7 +1,7 @@
 import {
     THE_MOST_RECENT_POSTS,
     POST_ERROR,
-  } from "../../constants/post.constants";
+  } from "../../../constants/post.constants";
   import axios from "axios";
   
   export const getMostRecentPosts = () => async (dispatch) => {

@@ -1,7 +1,7 @@
 import { ADD_COMMENT, POST_ERROR }
-from "../../constants/posts.constants";
+from "../../../constants/post.constants";
 import axios from 'axios';
-import { getPost } from "./getPost";
+import { getPost } from "../posts.actions/getPost";
 
 
 
