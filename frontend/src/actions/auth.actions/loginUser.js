@@ -4,7 +4,7 @@ import {
     AUTH_FORM_FAIL,
 } from "../../constants/auth.constants";
 
-
+import { userLoaded } from "../auth.actions/userLoaded";
 
 
 export const loginUser = (userData) =>async dispatch =>{

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { logOut } from "../../actions/auth.actions/logOut";
+import { logOut } from "../actions/auth.actions/logOut";
 import NavbarLinks from "./navbar/NavbarLinks";
 import NavbarLogo from "./NavbarLogo";
 

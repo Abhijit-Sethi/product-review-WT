@@ -14,7 +14,7 @@ const RegistrationPage = () =>{
 
     });
     const {name,lastName,userName,email,password} = userData;
-    const onChange = e => setUserData({[e.target.userName]: e.target.value});
+    const onChange = e => setUserData({...userData,[e.target.userName]: e.target.value});
     
     return(
         <div>

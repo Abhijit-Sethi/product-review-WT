@@ -18,6 +18,7 @@ module.exports =async (req,res)=>{
     let newPost = new Post({
       textOfThePost,
       name : user.name,
+      avatar: user.avatar,
       user:req.user.id
     });
 

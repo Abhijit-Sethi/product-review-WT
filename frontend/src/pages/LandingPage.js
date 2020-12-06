@@ -4,7 +4,9 @@ import React from "react";
 const LandingPage = () =>{
     return(
         <div>
-            <h1>Page</h1>
+        <br>
+        </br>
+        <br></br>
         </div>
     );
 };

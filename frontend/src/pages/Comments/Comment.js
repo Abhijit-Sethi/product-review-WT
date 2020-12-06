@@ -3,7 +3,6 @@ import Moment from "react-moment";
 import { connect } from "react-redux";
 import { removeLikeFromComment } from "../../actions/posts.actions/likes.actions/removeLikeFromComment";
 import { addLikeToComment } from "../../actions/posts.actions/likes.actions/addLikeToComment";
-import Spinner from "../../Spinner";
 
 const Comment = ({
   comment,

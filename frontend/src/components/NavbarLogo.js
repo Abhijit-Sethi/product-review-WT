@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import successity from "../../successity.png";
+import successity from "../successity.png";
 
 const NavbarLogo = () => {
   return (

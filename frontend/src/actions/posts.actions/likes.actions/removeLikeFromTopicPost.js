@@ -1,5 +1,5 @@
 import axios from "axios";
-import { REMOVE_LIKE, POST_ERROR } from "../../../../constants/post.constants";
+import { REMOVE_LIKE, POST_ERROR } from "../../../constants/post.constants";
 import { getPosts } from "../posts.actions/getPosts";
 import { getMostRecentPosts } from "../posts.actions/getMostRecentPosts";
 import { getMostCommentedPosts } from "../posts.actions/getMostCommentedPosts";

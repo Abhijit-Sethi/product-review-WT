@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 let PostSchema = mongoose.Schema({
   user: {
@@ -13,6 +13,9 @@ let PostSchema = mongoose.Schema({
     type: String,
   },
   userName: {
+    type: String,
+  },
+  avatar: {
     type: String,
   },
   date: {
@@ -40,6 +43,9 @@ let PostSchema = mongoose.Schema({
       name: {
         type: String,
         required: true,
+      },
+      avatar: {
+        type: String,
       },
       textOfTheComment: {
         type: String,

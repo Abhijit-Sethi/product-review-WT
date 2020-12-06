@@ -1,15 +1,19 @@
 const express = require("express");
 const router = express.Router();
 const authentication = require("../middleware/authentication");
+const {
+  createPostValidator,
+  searchForPostValidator,
+  addCommentValidator,
+} = require("../middleware/expressValidator");
 const getPosts = require("../functions/postFunctions/getPosts");
-const getMostLikedPost = require("../functions/postFunctions/getMostLikedPost");
-const getMostRecentPost = require("../functions/postFunctions/getPostsByDate");
-const getMostCommentedPost = require("../functions/postFunctions/getMostCommentedPost");
+const getMostLikedPosts = require("../functions/postFunctions/getMostLikedPost");
+const getPostsByDate = require("../functions/postFunctions/getPostsByDate");
+const getMostCommented = require("../functions/postFunctions/getMostCommented");
 const getSinglePost = require("../functions/postFunctions/getSinglePost");
-const getUserPostsById = require("../functions/postFunctions/getUserPostsById");
 const getUserPostsByMiddleware = require("../functions/postFunctions/getUserPostsByMiddleware");
+const getUserPostsById = require("../functions/postFunctions/getUserPostsById");
 const createPost = require("../functions/postFunctions/createPost");
-const { createPostValidator, searchForPostValidator, addCommentValidator } = require("../middleware/expressValidator");
 const searchForPost = require("../functions/postFunctions/searchForPost");
 const addLike = require("../functions/postFunctions/addLike");
 const addComment = require("../functions/postFunctions/addComment");
@@ -18,38 +22,54 @@ const removePost = require("../functions/postFunctions/removePost");
 const removeLikeFromPost = require("../functions/postFunctions/removeLikeFromPost");
 const removeComment = require("../functions/postFunctions/removeComment");
 const removeLikeFromComment = require("../functions/postFunctions/removeLikeFromComment");
-// const { route } = require("./users");
 
-router.get('/posts',getPosts);
+router.get("/posts", getPosts);
 
-router.get('/posts/most_liked',getMostLikedPost);
+router.get("/posts/most_liked", getMostLikedPosts);
 
-router.get('/posts/most_recent',getMostRecentPost);
+router.get("/posts/the_most_recent", getPostsByDate);
 
-router.get('/posts/most_commented',getMostCommentedPost);
+router.get("/posts/the_most_commented", getMostCommented);
 
-router.get('/single_post/:post_id',getSinglePost);
+router.get("/single_post/:post_id", getSinglePost);
 
-router.get('/user_posts/:user_id',getUserPostsById);
+router.get("/user_posts/:user_id", getUserPostsById);
 
-router.get('/user_posts',authentication,getUserPostsByMiddleware);
+router.get("/user_posts", authentication, getUserPostsByMiddleware);
 
-router.post('/',authentication,createPostValidator,createPost);
+router.post("/", authentication, createPostValidator, createPost);
 
-router.put('/search_for_post',searchForPostValidator,searchForPost);
+router.put("/search_for_post", searchForPostValidator, searchForPost);
 
-router.put('/likes/:post_id',authentication,addLike);
+router.put("/likes/:post_id", authentication, addLike);
 
-router.put('/add_comment/:post_id',authentication,addCommentValidator,addComment);
+router.put(
+  "/add_comment/:post_id",
+  authentication,
+  addCommentValidator,
+  addComment
+);
 
-router.put('/like_comment/:post_id/:comment_id',authentication,likeComment)
+router.put("/like_comment/:post_id/:comment_id", authentication, likeComment);
 
-router.delete('/delete_post/:post_id',authentication,removePost)
+router.delete("/delete_post/:post_id", authentication, removePost);
 
-router.delete('/remove_like_from_post/:post_id/:like_id',authentication,removeLikeFromPost);
+router.delete(
+  "/remove_like_from_post/:post_id/:like_id",
+  authentication,
+  removeLikeFromPost
+);
 
-router.delete('/remove_comment/:post_id/:comment_id',authentication,removeComment);
+router.delete(
+  "/remove_comment/:post_id/:comment_id",
+  authentication,
+  removeComment
+);
 
-router.delete('/remove_like_from_comment/:post_id/:comment_id/:like_id',authentication,removeLikeFromComment);
+router.delete(
+  "/remove_like_from_comment/:post_id/:comment_id/:like_id",
+  authentication,
+  removeLikeFromComment
+);
 
 module.exports = router;

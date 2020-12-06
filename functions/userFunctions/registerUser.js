@@ -1,6 +1,7 @@
 const {validationResult} = require("express-validator")
 const jwt = require("jsonwebtoken");
 const config = require("config");
+const gravatar = require("gravatar");
 
 let User = require("../../schemas/User");
 
@@ -26,12 +27,19 @@ module.exports = async (req,res) => {
       return res.status(401).json("Username is already taken");
     }
 
+    const avatar = gravatar.url(email, {
+      r: "pg",
+      d: "mm",
+      s: "200",
+    });
+
     let newUser = new User({
       name,
       lastName,
       userName,
       email,
       password,
+      avatar
     });
 
     await newUser.save();

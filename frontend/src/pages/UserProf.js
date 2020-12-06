@@ -4,7 +4,7 @@ import { getUserById } from "../actions/users.actions/getUserById";
 import { getUserPostsById } from "../actions/users.actions/getUserPostsById";
 import Spinner from "../Spinner";
 import UserPostsWrapper from "./UserPost/UserPostWrapper";
-import UserProfileData from "../components/userProfile/UserProfileData";
+import UserProfileData from "../components/userProfile/userProfileData";
 
 const UserProfile = ({
   users,
