@@ -1041,6 +1041,7 @@ html body .href__style__remove {
     min-height: 90vh;
     padding-top: 2em;
     width: 100vw;
+    background-color: #167a4b;
 }
 
 @media (min-width: 1024px) {
@@ -1100,7 +1101,7 @@ html body .href__style__remove {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background: #fff;
+    background: white;
 }
 
 @media (min-width: 1024px) {
@@ -1170,7 +1171,7 @@ html body .href__style__remove {
 .change-profile-page-wrapper .register-section .inputs-wrapper .button-wrapper:hover,
 .change-profile-page-wrapper .change-profile-section .inputs-wrapper .button-wrapper:hover {
     cursor: pointer;
-    background: #37c1eb;
+    background: #119c46;
 }
 
 .register-page-wrapper .register-section .inputs-wrapper .button-wrapper .button-letter,
