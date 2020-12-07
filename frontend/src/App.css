@@ -26,6 +26,7 @@ html body .flex__center {
 html body .all-page-wrapper {
     width: 100vw;
     height: 100vh;
+    background-color: #119c46;
 }
 
 html body .hover:hover {
@@ -47,11 +48,11 @@ html body .p__size {
 }
 
 html body .app_color_font {
-    color: #3cd1fd;
+    color: #1a815a;
 }
 
 html body .app_color_background {
-    background: #3cd1fd;
+    background: #1a815a;
 }
 
 html body .font__bold {
@@ -526,7 +527,7 @@ html body .href__style__remove {
     -ms-flex-direction: column;
     flex-direction: column;
     border: 1px solid #2a0909;
-    background: #fff;
+    background: rgb(255, 255, 255);
     width: 99%;
     margin-bottom: 0.5em;
     padding: 1em 0;
