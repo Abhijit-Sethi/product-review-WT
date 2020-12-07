@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const NavbarLinks = ({ isLoggedIn, logOut }) => {
   return (
     <div className="nav-links">
-      {/* <Link to="/users" className="href__style__remove nav__link">
+      <Link to="/users" className="href__style__remove nav__link">
         Users <i className="fas fa-users"></i>
-      </Link> */}
+      </Link>
 
       <Link to="/topics" className="href__style__remove nav__link">
         Topics <i className="fas fa-comments"></i>
